@@ -6,6 +6,9 @@ clean up sound, generate subtitles, and export, all on your own computer.
 **[⬇ Download the latest version](https://github.com/kayceechris/mediaforge/releases/latest)**
 (`MediaForge-Setup-x.y.z.exe`, Windows 10/11, 64-bit)
 
+**[📖 Read the user manual](USER_MANUAL.md)**: everything from your first video to exporting,
+plus shortcuts and troubleshooting.
+
 ## Features
 
 - **Timeline editing:** multiple video, audio and title tracks; trim, split, ripple delete,
