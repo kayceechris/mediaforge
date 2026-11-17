@@ -78,17 +78,17 @@ exports it.
 ## Importing media
 
 Imported files stay where they are on your disk; MediaForge only remembers their location. Don't
-delete or move them while you edit. If you do, see *Missing media* under
+delete or move them while you edit. If you do, see _Missing media_ under
 [Projects](#projects).
 
 **Ways to import:** the **Import…** button, **Ctrl+I**, **File → Import media…**, or dragging
 files from Explorer into the Media Library.
 
-| Kind  | File types                                                        |
-| ----- | ----------------------------------------------------------------- |
+| Kind  | File types                                                       |
+| ----- | ---------------------------------------------------------------- |
 | Video | MP4, M4V, MOV, MKV, WebM, AVI, WMV, MPG/MPEG, TS, MTS, M2TS, GIF |
-| Audio | MP3, WAV, AAC, M4A, FLAC, OGG/OGA, Opus, WMA, AIF/AIFF            |
-| Image | PNG, JPG/JPEG, WebP, BMP, TIF/TIFF                                |
+| Audio | MP3, WAV, AAC, M4A, FLAC, OGG/OGA, Opus, WMA, AIF/AIFF           |
+| Image | PNG, JPG/JPEG, WebP, BMP, TIF/TIFF                               |
 
 **The Media Library** shows each file with a thumbnail, its kind (VIDEO, AUDIO or IMAGE), its
 resolution and its length. Switch between **Grid** and **List** at the top of the panel; List
@@ -177,7 +177,7 @@ Inspector, type the text (press Enter for more lines) and choose the font, colou
 **Bold**, **Shadow** and position. To make a title longer or shorter, drag its edges or type a
 **Duration**. Still images work the same way (5 seconds by default).
 
-**Transitions.** Select the clip that comes *second* and pick **Transition in**:
+**Transitions.** Select the clip that comes _second_ and pick **Transition in**:
 
 - **Crossfade:** the next clip gradually appears over the previous one.
 - **Dip to black:** the picture fades to black, then up into the next clip.
@@ -222,12 +222,12 @@ and also fade the sound.
 **Audio tools** (in the Inspector, for a clip with sound). Each one makes a cleaned-up copy and
 switches the clip to it. The original stays in the library, and Undo switches back.
 
-| Tool                                       | What it does                                                                            | Use it when                                         |
-| ------------------------------------------ | --------------------------------------------------------------------------------------- | --------------------------------------------------- |
-| **Normalize (−16 LUFS)**                   | Raises or lowers the clip to podcast and streaming loudness, with a limiter so peaks don't clip | A recording is too quiet or too loud           |
-| **Reduce noise** (Light / Medium / Strong) | Removes steady background noise                                                         | Hiss, hum, fan or air-conditioning noise            |
-| **Isolate voice**                          | Keeps the voice and removes almost everything else, using a speech-trained neural network | Speech recorded over traffic, music or room noise |
-| **Detect silence** → **Cut silences**      | Finds quiet gaps, then cuts them out (keeping a short breath) and closes the gaps       | Tightening up talking-head or podcast recordings    |
+| Tool                                       | What it does                                                                                    | Use it when                                       |
+| ------------------------------------------ | ----------------------------------------------------------------------------------------------- | ------------------------------------------------- |
+| **Normalize (−16 LUFS)**                   | Raises or lowers the clip to podcast and streaming loudness, with a limiter so peaks don't clip | A recording is too quiet or too loud              |
+| **Reduce noise** (Light / Medium / Strong) | Removes steady background noise                                                                 | Hiss, hum, fan or air-conditioning noise          |
+| **Isolate voice**                          | Keeps the voice and removes almost everything else, using a speech-trained neural network       | Speech recorded over traffic, music or room noise |
+| **Detect silence** → **Cut silences**      | Finds quiet gaps, then cuts them out (keeping a short breath) and closes the gaps               | Tightening up talking-head or podcast recordings  |
 
 **Recording a voice-over.** Move the playhead to where the narration should start and click
 **● Rec** in the timeline toolbar. Allow microphone access if asked. The timeline plays while you
@@ -266,14 +266,14 @@ Exporting turns your timeline into a single file that looks and sounds like the 
 the export dialog with **Export…** at the top of the Preview panel, **Ctrl+E**, or
 **File → Export…**.
 
-| Format         | What you get                            | Good for                                               |
-| -------------- | --------------------------------------- | ------------------------------------------------------ |
-| **MP4 1080p**  | Full HD H.264 video with AAC sound      | Almost everything: YouTube, social media, phones, TVs |
-| **MP4 720p**   | A smaller H.264 file                    | Email, messaging, slow connections                     |
-| **MP4 4K**     | 2160p H.264 video                       | Large screens; slow without hardware encoding          |
-| **WebM 1080p** | VP9 video with Opus sound               | Websites                                               |
-| **MP3**        | Sound only, 320 kbps                    | Podcasts, music                                        |
-| **WAV**        | Sound only, uncompressed 16-bit 48 kHz  | Further audio editing                                  |
+| Format         | What you get                           | Good for                                              |
+| -------------- | -------------------------------------- | ----------------------------------------------------- |
+| **MP4 1080p**  | Full HD H.264 video with AAC sound     | Almost everything: YouTube, social media, phones, TVs |
+| **MP4 720p**   | A smaller H.264 file                   | Email, messaging, slow connections                    |
+| **MP4 4K**     | 2160p H.264 video                      | Large screens; slow without hardware encoding         |
+| **WebM 1080p** | VP9 video with Opus sound              | Websites                                              |
+| **MP3**        | Sound only, 320 kbps                   | Podcasts, music                                       |
+| **WAV**        | Sound only, uncompressed 16-bit 48 kHz | Further audio editing                                 |
 
 **Range.** Export the **Whole timeline**, just the span of the **Selected clips**, or a
 **custom** start and end in seconds. The dialog shows the size, frame rate and length before you
@@ -337,52 +337,52 @@ use the arrow keys (hold Shift for bigger steps).
 Press **?** or **F1** in the app to see this list at any time. Shortcuts with Ctrl also work
 while you're typing in a text field. The others don't, so they never get in the way of typing.
 
-| Shortcut                   | Action                                 |
-| -------------------------- | -------------------------------------- |
-| Ctrl+N                     | New project                            |
-| Ctrl+O                     | Open project                           |
-| Ctrl+S                     | Save                                   |
-| Ctrl+Shift+S               | Save as                                |
-| Ctrl+I                     | Import media                           |
-| Ctrl+E                     | Export                                 |
-| Ctrl+Z                     | Undo                                   |
-| Ctrl+Shift+Z or Ctrl+Y     | Redo                                   |
-| S                          | Split at playhead                      |
-| Delete or Backspace        | Delete selected clips (leave a gap)    |
-| Shift+Delete               | Ripple delete (close the gap)          |
-| M                          | Add marker at playhead                 |
-| Esc                        | Clear selection                        |
-| Ctrl+click or Shift+click  | Add or remove a clip from the selection |
-| Alt while dragging         | Move or trim without snapping          |
-| Space                      | Play / pause                           |
-| L                          | Play forward (press again to go faster) |
-| J                          | Play backward (press again to go faster) |
-| K                          | Stop                                   |
-| ← / →                      | Previous / next frame                  |
-| Shift+← / Shift+→          | Back / forward one second              |
-| Home / End                 | Go to start / end                      |
-| + / −                      | Zoom timeline in / out                 |
-| Ctrl+scroll                | Zoom timeline at the pointer           |
-| ? or F1                    | Show keyboard shortcuts                |
+| Shortcut                  | Action                                   |
+| ------------------------- | ---------------------------------------- |
+| Ctrl+N                    | New project                              |
+| Ctrl+O                    | Open project                             |
+| Ctrl+S                    | Save                                     |
+| Ctrl+Shift+S              | Save as                                  |
+| Ctrl+I                    | Import media                             |
+| Ctrl+E                    | Export                                   |
+| Ctrl+Z                    | Undo                                     |
+| Ctrl+Shift+Z or Ctrl+Y    | Redo                                     |
+| S                         | Split at playhead                        |
+| Delete or Backspace       | Delete selected clips (leave a gap)      |
+| Shift+Delete              | Ripple delete (close the gap)            |
+| M                         | Add marker at playhead                   |
+| Esc                       | Clear selection                          |
+| Ctrl+click or Shift+click | Add or remove a clip from the selection  |
+| Alt while dragging        | Move or trim without snapping            |
+| Space                     | Play / pause                             |
+| L                         | Play forward (press again to go faster)  |
+| J                         | Play backward (press again to go faster) |
+| K                         | Stop                                     |
+| ← / →                     | Previous / next frame                    |
+| Shift+← / Shift+→         | Back / forward one second                |
+| Home / End                | Go to start / end                        |
+| + / −                     | Zoom timeline in / out                   |
+| Ctrl+scroll               | Zoom timeline at the pointer             |
+| ? or F1                   | Show keyboard shortcuts                  |
 
 ## Troubleshooting
 
-| Problem | What to do |
-| --- | --- |
-| "Windows protected your PC" when installing | Click **More info**, then **Run anyway**. The installer is safe but not yet code-signed. |
-| The preview says "Preparing preview proxy…" | MediaForge is making a copy of that file that plays smoothly. Wait for the **proxy** badge in the library; you can keep editing meanwhile. |
-| Sound plays fast and high-pitched right after a speed change | The pitch-corrected sound is still being prepared and switches over within seconds. Exports always sound correct. |
-| A file won't import ("Unsupported file type") | Check that it has one of the extensions listed under [Importing media](#importing-media). Damaged files may also be refused. |
-| "Missing media" when opening a project | The files were moved or renamed. Click **Locate…** and pick them in their new folder. |
-| Export fails with "Some media is offline" | Relink the missing files first (look for the red badge in the library), then export again. |
-| Export note: "…failed; exported with software encoding" | The hardware encoder didn't work on this computer, so MediaForge used software instead. The file is fine; choose **Software (x264)** next time to skip the retry. |
-| A 4K export is very slow | Choose a hardware encoder in the export dialog if one is listed, or export at 1080p. |
-| Generate subtitles is stuck on "Downloading the speech model" | The first run needs internet for a 76 MB download. Check your connection, cancel and try again. |
-| Subtitles have wrong words | Click a subtitle and correct its text in the Inspector. Setting **Spoken language** instead of detecting it automatically also helps. |
-| Recording does nothing | Allow microphone access for MediaForge in Windows Settings → Privacy & security → Microphone. |
-| A shortcut doesn't respond | Click an empty part of the timeline first: single-key shortcuts are ignored while a text field has focus. |
-| The app closed unexpectedly | Start it again and choose **Recover** to get back your work from the last autosave (at most a minute old). |
-| Panels are too small or oddly sized | Use **View → Reset panel layout**. |
+| Problem                                                       | What to do                                                                                                                                                        |
+| ------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| "Windows protected your PC" when installing                   | Click **More info**, then **Run anyway**. The installer is safe but not yet code-signed.                                                                          |
+| The preview says "Preparing preview proxy…"                   | MediaForge is making a copy of that file that plays smoothly. Wait for the **proxy** badge in the library; you can keep editing meanwhile.                        |
+| Sound plays fast and high-pitched right after a speed change  | The pitch-corrected sound is still being prepared and switches over within seconds. Exports always sound correct.                                                 |
+| A file won't import ("Unsupported file type")                 | Check that it has one of the extensions listed under [Importing media](#importing-media). Damaged files may also be refused.                                      |
+| "Missing media" when opening a project                        | The files were moved or renamed. Click **Locate…** and pick them in their new folder.                                                                             |
+| Export fails with "Some media is offline"                     | Relink the missing files first (look for the red badge in the library), then export again.                                                                        |
+| Export note: "…failed; exported with software encoding"       | The hardware encoder didn't work on this computer, so MediaForge used software instead. The file is fine; choose **Software (x264)** next time to skip the retry. |
+| A 4K export is very slow                                      | Choose a hardware encoder in the export dialog if one is listed, or export at 1080p.                                                                              |
+| Generate subtitles is stuck on "Downloading the speech model" | The first run needs internet for a 76 MB download. Check your connection, cancel and try again.                                                                   |
+| Subtitles have wrong words                                    | Click a subtitle and correct its text in the Inspector. Setting **Spoken language** instead of detecting it automatically also helps.                             |
+| Recording does nothing                                        | Allow microphone access for MediaForge in Windows Settings → Privacy & security → Microphone.                                                                     |
+| A shortcut doesn't respond                                    | Click an empty part of the timeline first: single-key shortcuts are ignored while a text field has focus.                                                         |
+| The app closed unexpectedly                                   | Start it again and choose **Recover** to get back your work from the last autosave (at most a minute old).                                                        |
+| Panels are too small or oddly sized                           | Use **View → Reset panel layout**.                                                                                                                                |
 
 ## Help and licenses
 
