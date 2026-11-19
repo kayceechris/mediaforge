@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MediaForge video tutorials</title>
+<style>
+  :root { --bg:#0d111a; --panel:#161b26; --line:#262d3b; --text:#e8ebf2; --muted:#9aa3b5; --accent:#5b8cff; --amber:#fbbf24 }
+  * { box-sizing: border-box } body { margin:0; background:var(--bg); color:var(--text); font:15px/1.5 'Segoe UI',system-ui,sans-serif }
+  header { padding:40px 24px 8px; max-width:1180px; margin:auto } h1 { margin:0 0 6px; font-size:30px }
+  header p { color:var(--muted); margin:0 0 14px; max-width:720px } nav { display:flex; flex-wrap:wrap; gap:8px }
+  nav a { color:var(--text); text-decoration:none; border:1px solid var(--line); border-radius:999px; padding:4px 12px; font-size:13px }
+  nav a:hover { border-color:var(--accent) } main { max-width:1180px; margin:auto; padding:0 24px 60px }
+  h2 { margin:34px 0 14px; font-size:20px } .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:16px }
+  .card { display:flex; flex-direction:column; color:inherit; text-decoration:none; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden }
+  .card:hover { border-color:var(--accent) } .thumb { position:relative; aspect-ratio:16/9; background:#000 }
+  .thumb img { width:100%; height:100%; object-fit:cover; display:block } .len { position:absolute; right:8px; bottom:8px; background:rgba(0,0,0,.75); padding:1px 6px; border-radius:4px; font-size:12px }
+  .play { position:absolute; inset:0; display:grid; place-items:center; font-size:34px; color:#fff; opacity:0; background:rgba(0,0,0,.35); transition:opacity .15s }
+  .card:hover .play { opacity:1 } .title { padding:10px 12px 2px; font-weight:600 } .summary { padding:0 12px 12px; color:var(--muted); font-size:13px }
+  dialog { width:min(1100px,94vw); padding:0; border:1px solid var(--line); border-radius:12px; background:var(--panel); color:var(--text) }
+  dialog::backdrop { background:rgba(0,0,0,.7) } dialog video { width:100%; display:block; background:#000 }
+  .bar { display:flex; align-items:start; gap:12px; padding:12px 16px } .bar div { flex:1 } .bar h3 { margin:0 0 2px } .bar p { margin:0; color:var(--muted) }
+  .bar button { background:none; border:1px solid var(--line); color:var(--text); border-radius:6px; padding:4px 12px; cursor:pointer }
+  footer { color:var(--muted); font-size:13px; text-align:center; padding:20px }
+  footer a, header a.get { color:var(--accent) }
+</style></head><body>
+<header><h1>MediaForge video tutorials</h1>
+<p>Short narrated videos of MediaForge, made from the app itself. Watch them any time to learn a feature or catch up. Inside MediaForge, open <b>Help → Video tutorials</b>, or follow the step-by-step lessons in <b>Tutorials</b>.
+<a class="get" href="https://github.com/kayceechris/mediaforge/releases/latest">Download MediaForge</a></p>
+<nav><a href="#getting-started">Getting started</a><a href="#editing">Editing</a><a href="#effects">Effects</a><a href="#sound">Sound</a><a href="#saving">Saving &amp; exporting</a></nav></header>
+<main><section id="getting-started"><h2>Getting started</h2><div class="grid"><a class="card" href="#interface" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/interface.mp4" data-title="The MediaForge window" data-summary="A tour of the Media Library, Preview, Inspector and Timeline, and where everything is.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/interface.jpg" alt="" loading="lazy"><span class="len">1:08</span><span class="play">▶</span></span>
+  <span class="title">The MediaForge window</span><span class="summary">A tour of the Media Library, Preview, Inspector and Timeline, and where everything is.</span></a>
+<a class="card" href="#importing" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/importing.mp4" data-title="Importing media" data-summary="Bring in videos, music and pictures, and find your way around the Media Library.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/importing.jpg" alt="" loading="lazy"><span class="len">0:50</span><span class="play">▶</span></span>
+  <span class="title">Importing media</span><span class="summary">Bring in videos, music and pictures, and find your way around the Media Library.</span></a>
+<a class="card" href="#first-edit" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/first-edit.mp4" data-title="Your first edit" data-summary="Put clips on the timeline, trim them, split them and close the gaps.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/first-edit.jpg" alt="" loading="lazy"><span class="len">1:13</span><span class="play">▶</span></span>
+  <span class="title">Your first edit</span><span class="summary">Put clips on the timeline, trim them, split them and close the gaps.</span></a>
+<a class="card" href="#titles" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/titles.mp4" data-title="Adding titles and text" data-summary="Add a title, style it, and make it animate in and out.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/titles.jpg" alt="" loading="lazy"><span class="len">0:55</span><span class="play">▶</span></span>
+  <span class="title">Adding titles and text</span><span class="summary">Add a title, style it, and make it animate in and out.</span></a>
+<a class="card" href="#music" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/music.mp4" data-title="Adding music" data-summary="Put music under your video, set its level and fade it in and out.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/music.jpg" alt="" loading="lazy"><span class="len">0:53</span><span class="play">▶</span></span>
+  <span class="title">Adding music</span><span class="summary">Put music under your video, set its level and fade it in and out.</span></a></div></section>
+<section id="editing"><h2>Editing</h2><div class="grid"><a class="card" href="#speed" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/speed.mp4" data-title="Changing speed and speed ramps" data-summary="Slow motion, fast motion, and smooth speed ramps that keep the sound’s pitch.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/speed.jpg" alt="" loading="lazy"><span class="len">1:00</span><span class="play">▶</span></span>
+  <span class="title">Changing speed and speed ramps</span><span class="summary">Slow motion, fast motion, and smooth speed ramps that keep the sound’s pitch.</span></a>
+<a class="card" href="#transform" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/transform.mp4" data-title="Crop, rotate and picture-in-picture" data-summary="Position, scale, rotate and crop a clip, and put one video in the corner of another.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/transform.jpg" alt="" loading="lazy"><span class="len">0:45</span><span class="play">▶</span></span>
+  <span class="title">Crop, rotate and picture-in-picture</span><span class="summary">Position, scale, rotate and crop a clip, and put one video in the corner of another.</span></a>
+<a class="card" href="#stabilize" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/stabilize.mp4" data-title="Stabilizing shaky video" data-summary="Smooth out camera shake from handheld footage in one click.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/stabilize.jpg" alt="" loading="lazy"><span class="len">1:29</span><span class="play">▶</span></span>
+  <span class="title">Stabilizing shaky video</span><span class="summary">Smooth out camera shake from handheld footage in one click.</span></a>
+<a class="card" href="#transcript" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/transcript.mp4" data-title="Subtitles and editing by transcript" data-summary="Generate subtitles from speech, and cut the video by deleting words from its transcript.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/transcript.jpg" alt="" loading="lazy"><span class="len">1:31</span><span class="play">▶</span></span>
+  <span class="title">Subtitles and editing by transcript</span><span class="summary">Generate subtitles from speech, and cut the video by deleting words from its transcript.</span></a></div></section>
+<section id="effects"><h2>Effects</h2><div class="grid"><a class="card" href="#transitions" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/transitions.mp4" data-title="Adding transitions" data-summary="Crossfades, wipes, pushes, zooms and more between two clips.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/transitions.jpg" alt="" loading="lazy"><span class="len">0:54</span><span class="play">▶</span></span>
+  <span class="title">Adding transitions</span><span class="summary">Crossfades, wipes, pushes, zooms and more between two clips.</span></a>
+<a class="card" href="#looks" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/looks.mp4" data-title="Video effects, looks and LUTs" data-summary="Colour, one-click looks, blur and vignette, and colour LUTs from a colourist.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/looks.jpg" alt="" loading="lazy"><span class="len">0:55</span><span class="play">▶</span></span>
+  <span class="title">Video effects, looks and LUTs</span><span class="summary">Colour, one-click looks, blur and vignette, and colour LUTs from a colourist.</span></a>
+<a class="card" href="#animation" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/animation.mp4" data-title="Keyframes and the Ken Burns effect" data-summary="Animate position, scale, rotation and opacity, and bring photos to life with pan and zoom.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/animation.jpg" alt="" loading="lazy"><span class="len">1:03</span><span class="play">▶</span></span>
+  <span class="title">Keyframes and the Ken Burns effect</span><span class="summary">Animate position, scale, rotation and opacity, and bring photos to life with pan and zoom.</span></a>
+<a class="card" href="#green-screen" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/green-screen.mp4" data-title="Green screen" data-summary="Replace a green background with another picture or video.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/green-screen.jpg" alt="" loading="lazy"><span class="len">0:50</span><span class="play">▶</span></span>
+  <span class="title">Green screen</span><span class="summary">Replace a green background with another picture or video.</span></a>
+<a class="card" href="#blur-censor" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/blur-censor.mp4" data-title="Blurring part of a video" data-summary="Hide a face, a number plate or a logo with an adjustment layer and a mask.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/blur-censor.jpg" alt="" loading="lazy"><span class="len">0:49</span><span class="play">▶</span></span>
+  <span class="title">Blurring part of a video</span><span class="summary">Hide a face, a number plate or a logo with an adjustment layer and a mask.</span></a>
+<a class="card" href="#split-screen" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/split-screen.mp4" data-title="Split screen" data-summary="Show two to four videos side by side or in a grid.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/split-screen.jpg" alt="" loading="lazy"><span class="len">0:41</span><span class="play">▶</span></span>
+  <span class="title">Split screen</span><span class="summary">Show two to four videos side by side or in a grid.</span></a></div></section>
+<section id="sound"><h2>Sound</h2><div class="grid"><a class="card" href="#cleanup-audio" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/cleanup-audio.mp4" data-title="Cleaning up audio" data-summary="Make a recording louder, remove background noise and cut out silences.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/cleanup-audio.jpg" alt="" loading="lazy"><span class="len">0:52</span><span class="play">▶</span></span>
+  <span class="title">Cleaning up audio</span><span class="summary">Make a recording louder, remove background noise and cut out silences.</span></a>
+<a class="card" href="#audio-effects" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/audio-effects.mp4" data-title="Audio effects and ducking" data-summary="Voice effects like telephone and radio, reverb, and music that dips under speech.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/audio-effects.jpg" alt="" loading="lazy"><span class="len">1:08</span><span class="play">▶</span></span>
+  <span class="title">Audio effects and ducking</span><span class="summary">Voice effects like telephone and radio, reverb, and music that dips under speech.</span></a></div></section>
+<section id="saving"><h2>Saving &amp; exporting</h2><div class="grid"><a class="card" href="#export" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/export.mp4" data-title="Exporting your video" data-summary="Save your movie as MP4, WebM or audio, export part of it, and add chapters.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/export.jpg" alt="" loading="lazy"><span class="len">1:31</span><span class="play">▶</span></span>
+  <span class="title">Exporting your video</span><span class="summary">Save your movie as MP4, WebM or audio, export part of it, and add chapters.</span></a>
+<a class="card" href="#vertical" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/vertical.mp4" data-title="Vertical video for Shorts and Reels" data-summary="Switch to 9:16 and let auto reframe keep the subject in the frame.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/vertical.jpg" alt="" loading="lazy"><span class="len">1:00</span><span class="play">▶</span></span>
+  <span class="title">Vertical video for Shorts and Reels</span><span class="summary">Switch to 9:16 and let auto reframe keep the subject in the frame.</span></a>
+<a class="card" href="#projects" data-video="https://github.com/kayceechris/mediaforge/releases/download/tutorials/projects.mp4" data-title="Saving projects and recovering work" data-summary="Save and reopen projects, relink moved files, and recover after a crash.">
+  <span class="thumb"><img src="https://github.com/kayceechris/mediaforge/releases/download/tutorials/projects.jpg" alt="" loading="lazy"><span class="len">0:45</span><span class="play">▶</span></span>
+  <span class="title">Saving projects and recovering work</span><span class="summary">Save and reopen projects, relink moved files, and recover after a crash.</span></a></div></section></main>
+<dialog id="player"><video controls preload="metadata"></video><div class="bar"><div><h3></h3><p></p></div><button type="button">Close</button></div></dialog>
+<footer>MediaForge · <a href="https://github.com/kayceechris/mediaforge/blob/main/USER_MANUAL.md">User manual</a></footer>
+<script>
+  const dlg = document.getElementById('player'), video = dlg.querySelector('video')
+  function open(card) {
+    video.src = card.dataset.video; dlg.querySelector('h3').textContent = card.dataset.title
+    dlg.querySelector('p').textContent = card.dataset.summary; dlg.showModal(); video.play().catch(() => {})
+  }
+  document.querySelectorAll('.card').forEach((c) => c.addEventListener('click', (e) => { e.preventDefault(); history.replaceState(null, '', c.hash); open(c) }))
+  dlg.querySelector('button').onclick = () => dlg.close()
+  dlg.addEventListener('close', () => { video.pause(); video.removeAttribute('src'); video.load(); history.replaceState(null, '', location.pathname) })
+  const start = location.hash && document.querySelector('.card[href="' + location.hash + '"]'); if (start) open(start)
+</script></body></html>

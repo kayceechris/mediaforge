@@ -9,6 +9,10 @@ clean up sound, generate subtitles, and export, all on your own computer.
 **[📖 Read the user manual](USER_MANUAL.md)**: everything from your first video to exporting,
 plus shortcuts and troubleshooting.
 
+**[🎬 Watch the video tutorials](https://kayceechris.github.io/mediaforge/tutorials/)**: 20 short
+narrated videos, from the basics to green screen and speed ramps ([list](TUTORIALS.md)). They're
+also in the app under Help → Video tutorials.
+
 ## Features
 
 - **Timeline editing:** multiple video, audio and title tracks; trim, split, ripple delete,
