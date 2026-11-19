@@ -1,6 +1,6 @@
 # MediaForge User Manual
 
-MediaForge 1.1 · November 2026
+MediaForge 1.3 · November 2026
 
 MediaForge is a video and audio editor for Windows. You import clips, arrange them on a
 timeline, improve the picture and sound, and export a finished file, all on your own computer.
@@ -27,7 +27,7 @@ timeline, improve the picture and sound, and export a finished file, all on your
 
 MediaForge runs on Windows 10 and 11 (64-bit). You don't need administrator rights to install it.
 
-1. Download **MediaForge-Setup-1.1.0.exe** from
+1. Download **MediaForge-Setup-1.3.0.exe** from
    [the releases page](https://github.com/kayceechris/mediaforge/releases/latest).
 2. Run it. Windows may show **"Windows protected your PC"**, because the installer isn't
    code-signed yet. Click **More info**, then **Run anyway**.
@@ -56,6 +56,12 @@ can be resized (see [Arranging the workspace](#arranging-the-workspace)).
 
 This walkthrough makes a short video with a title, a transition and music, then saves and
 exports it.
+
+> **Prefer to be shown?** Click **🎓 Tutorials** at the top right of the window (or **Help →
+> Tutorials…**). Each lesson highlights what to press next and moves on by itself when you've
+> done it: _Your first video_, _Titles and animation_, _Sound and music_, _Vertical video for
+> Shorts and Reels_ and _Green screen_. No footage at hand? Every lesson offers a sample clip to
+> practise on. Finished lessons get a tick.
 
 1. **Import.** Click **Import…** in the Media Library (or press Ctrl+I). Pick a few video clips,
    a still image or two, and a music file. You can also drag files from Explorer straight into
@@ -138,7 +144,14 @@ Shift+← / Shift+→ step one second, and Home and End jump to the start or end
 markers and the playhead. Hold **Alt** while dragging to place something freely.
 
 **Markers.** Press **M** (or click **Marker**) to drop a marker at the playhead. Use markers to
-note a beat or a point to come back to.
+note a beat or a point to come back to. Click a marker to jump to it, double-click it to give it
+a name, and right-click it to remove it.
+
+**Chapters.** Named markers become chapters: put one where each part of the video starts. MP4 and
+WebM exports include them (players show them as chapters), and **File → Copy YouTube chapters**
+puts lines like `0:00 Intro` on the clipboard, ready to paste into a YouTube description. The
+first chapter always starts at 0:00, called "Intro" if there's no marker there. MediaForge warns
+you if YouTube would ignore them (it needs at least three chapters, each 10 seconds or longer).
 
 **Zoom.** Use the zoom slider, the **−** and **+** buttons or keys, or Ctrl+scroll over the
 timeline to zoom around the pointer.
@@ -213,6 +226,12 @@ shorter or longer, and the clips after it on the same track move to make room. V
 normal pitch. For a moment after a change the sound may play "chipmunk-style" while the
 corrected audio is prepared.
 
+**Speed ramps.** For a video clip, **Ramp** in the **Speed** section changes the speed smoothly
+across the clip: **Slow motion in the middle**, **Speed up**, **Slow down**, **Fast – slow –
+fast** or **Hero (slow at the end)**. MediaForge renders the ramped clip (a few seconds),
+keeping the sound's pitch, and the clips after it move to make room. Choosing another ramp
+starts again from the original footage; **No ramp** puts the clip back as it was.
+
 **Transform and picture-in-picture.** In **Transform & animation**, **Position X/Y**, **Scale**,
 **Rotation**, **Opacity** and **Crop** (left, right, top, bottom) place a clip in the frame.
 **PiP** shrinks it to a third of its size and puts it in the bottom-right corner; **Reset** undoes
@@ -252,6 +271,49 @@ sliders you can fine-tune:
 
 **Flip horizontal** mirrors the picture and **Flip vertical** turns it upside down. **Reset**
 removes all effects.
+
+**Green screen.** To put a person filmed in front of a green (or blue) screen over another
+picture, place the background on a track below, select the green-screen clip and tick
+**Remove background colour** in the **Green screen** section. **Auto** picks the screen colour
+from the edges of the frame at the playhead; you can also choose **Green**, **Blue** or any
+colour. Then adjust:
+
+- **Similarity:** how close to the screen colour a pixel must be to disappear. Raise it if bits
+  of the screen remain; lower it if the subject starts to vanish.
+- **Smoothness:** softens the edge between the subject and the background.
+- **Spill removal:** removes the green (or blue) tint the screen reflects onto hair and edges.
+
+**Colour LUTs.** A LUT (a `.cube` file) is a ready-made colour grade, such as a film look from a
+colourist. In **Effects**, click **Import LUT…** and choose the file; it's applied to the clip
+and kept in the project, so every clip can use it from the **Colour LUT** list. **LUT
+strength** blends it with the original colours.
+
+**Stabilize.** For shaky handheld video, choose **Light**, **Medium** or **Strong** in
+**Effects** and click **Stabilize**. MediaForge makes a steadied copy of the clip (it zooms in
+slightly to hide the moving edges) and switches the clip to it. Undo switches back.
+
+**Masks and blend modes.** In **Mask & blend**, a **Mask** (**Ellipse** or **Rectangle**) shows
+only part of the clip: set its position, size and **Feather** (a soft edge), or tick **Invert** to
+hide the inside instead. Use it for a spotlight effect, or to show two takes side by side. **Blend**
+changes how the clip mixes with what's below: **Multiply** darkens (good for shadows and
+textures), **Screen** lightens (light leaks, flares, smoke), plus **Overlay**, **Darken**,
+**Lighten** and **Difference**.
+
+**Split screen.** Select two to four clips that play at the same time on different tracks
+(Ctrl+click to add to the selection). The Inspector shows **Split screen** layouts: **Side by
+side**, **Top and bottom**, **One big, two small**, **Three columns** and **2 × 2 grid**, with an
+optional gap. The clip on the top track fills the first cell, and each clip is cropped to fit its
+cell.
+
+**Adjustment layers.** **+ Adjust** in the timeline toolbar adds a 5-second adjustment layer on a
+track above everything. Its colour, effects, LUT and mask change everything below it while it
+lasts. Use one to grade a whole scene at once, or to fade everything to black and white for a
+flashback. Drag its edges to change how long it lasts; fades work on it too.
+
+**Audio visualizer.** **+ Visualizer** in the timeline toolbar adds animated **Spectrum bars**
+or a **Waveform** driven by the sound of an audio track (choose the track, style, colour and
+number of bars in the **Visualizer** section). Move and size it like a picture, so it can sit
+under a podcast cover or over a music video.
 
 ## Working with sound
 
@@ -299,6 +361,11 @@ moment after the clip ends. **Reset** removes all audio effects.
 Echo and reverb change immediately, even during playback. The other effects take a moment to
 prepare after a change; until then the clip plays without them.
 
+**Ducking (music under speech).** Select a clip on your music track and, in the **Audio**
+section, set **Duck under** to the track with the voice (for example **Speech on A1**). The whole
+music track then dips by the **Duck amount** (12 dB at first) whenever someone speaks, and comes
+back up in the pauses. MediaForge finds the speech by itself ("Finding speech…" shows briefly).
+
 **Recording a voice-over.** Move the playhead to where the narration should start and click
 **● Rec** in the timeline toolbar. Allow microphone access if asked. The timeline plays while you
 record, so you can talk over the picture, and a level meter shows your input. Click stop when
@@ -326,6 +393,17 @@ switch on and off.
 gaps. Whisper often leaves these sounds out of its transcript, so expect it to catch some, not
 all.
 
+**Edit by transcript.** Select a clip with speech and click **Edit by transcript**. Its words
+appear as text: click a word to jump to it, Shift+click another to select everything in between,
+and press **Delete** to cut those words out of the video. The gap closes by itself, removed words
+stay visible but struck through, and **Ctrl+Z** brings them back. It's the quickest way to remove
+a fluffed sentence or a tangent.
+
+**Auto reframe.** For video clips: makes the clip fill the project's frame and follows the
+person in it, panning smoothly so they stay in view. Use it after switching a landscape video to
+a vertical or square format (see _Projects_). If nobody is found, it follows whatever moves. The
+first time, MediaForge downloads a small detection model (about 7 MB).
+
 **Split at scene changes.** For video clips: splits the clip wherever the picture cuts to a new
 shot, so you can rearrange or delete shots. Choose **Hard cuts only**, **Normal** or
 **Sensitive** (which also finds softer changes). One Undo puts the clip back together.
@@ -344,6 +422,9 @@ the export dialog with **Export…** at the top of the Preview panel, **Ctrl+E**
 | **WebM 1080p** | VP9 video with Opus sound              | Websites                                              |
 | **MP3**        | Sound only, 320 kbps                   | Podcasts, music                                       |
 | **WAV**        | Sound only, uncompressed 16-bit 48 kHz | Further audio editing                                 |
+
+The export has the project's shape: in a vertical project, **MP4 1080p** gives a 1080×1920
+video. If your timeline has named markers, **Chapters from markers** adds them as chapters.
 
 **Range.** Export the **Whole timeline**, just the span of the **Selected clips**, or a
 **custom** start and end in seconds. The dialog shows the size, frame rate and length before you
@@ -366,6 +447,13 @@ Exports always use your original media at full quality, never the preview copies
 
 A project file (`.mfproj`) stores your timeline and settings and points to your media files. It
 doesn't contain the media itself.
+
+**Format (landscape, vertical, square).** The **Project format** menu at the top of the Preview
+panel sets the shape of the whole video: **Landscape 16:9** (YouTube, TVs), **Vertical 9:16**
+(Shorts, Reels, TikTok), **Square 1:1** or **Portrait 4:5** (social feeds). Clips and titles keep
+their places relative to the frame; titles keep the same size relative to the frame's width.
+Landscape footage in a vertical project shows with bars at first: **Auto reframe** (see _AI
+tools_) or **Scale** makes it fill the frame.
 
 **Saving and opening.** Use the **File** menu: **New project** (Ctrl+N), **Open project…**
 (Ctrl+O), **Save** (Ctrl+S) and **Save as…** (Ctrl+Shift+S). The project name at the top shows
@@ -455,6 +543,12 @@ while you're typing in a text field. The others don't, so they never get in the 
 | Panels are too small or oddly sized                           | Use **View → Reset panel layout**.                                                                                                                                |
 
 ## Help and licenses
+
+**Tips.** **Help → Tips…** shows short tips one at a time (Previous / Next). The timeline gives
+tips too: empty tracks say what goes on them, and "Drag clip here" marks the end of a track.
+
+**Tutorials.** **🎓 Tutorials** (top right) or **Help → Tutorials…**: see _Your first video in
+five minutes_.
 
 **Reporting a problem or suggesting a feature:** open an issue at
 [github.com/kayceechris/mediaforge/issues](https://github.com/kayceechris/mediaforge/issues).
