@@ -1,6 +1,6 @@
 # MediaForge User Manual
 
-MediaForge 1.3 · November 2026
+MediaForge 1.3.1 · November 2026
 
 MediaForge is a video and audio editor for Windows. You import clips, arrange them on a
 timeline, improve the picture and sound, and export a finished file, all on your own computer.
@@ -27,7 +27,7 @@ timeline, improve the picture and sound, and export a finished file, all on your
 
 MediaForge runs on Windows 10 and 11 (64-bit). You don't need administrator rights to install it.
 
-1. Download **MediaForge-Setup-1.3.0.exe** from
+1. Download **MediaForge-Setup-1.3.1.exe** from
    [the releases page](https://github.com/kayceechris/mediaforge/releases/latest).
 2. Run it. Windows may show **"Windows protected your PC"**, because the installer isn't
    code-signed yet. Click **More info**, then **Run anyway**.
@@ -549,6 +549,12 @@ tips too: empty tracks say what goes on them, and "Drag clip here" marks the end
 
 **Tutorials.** **🎓 Tutorials** (top right) or **Help → Tutorials…**: see _Your first video in
 five minutes_.
+
+**Video tutorials.** **Help → Video tutorials…** (or **Watch video tutorials** in the Tutorials
+list) plays 20 short narrated videos inside MediaForge, grouped into Getting started, Editing,
+Effects, Sound and Saving & exporting. Come back to them any time to catch up on a feature;
+**Practise** starts the matching step-by-step lesson. They stream from the internet; you can also
+watch them on the [tutorials page](https://kayceechris.github.io/mediaforge/tutorials/).
 
 **Reporting a problem or suggesting a feature:** open an issue at
 [github.com/kayceechris/mediaforge/issues](https://github.com/kayceechris/mediaforge/issues).
