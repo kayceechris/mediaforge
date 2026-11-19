@@ -1,6 +1,6 @@
 # MediaForge User Manual
 
-MediaForge 1.0 · November 2026
+MediaForge 1.1 · November 2026
 
 MediaForge is a video and audio editor for Windows. You import clips, arrange them on a
 timeline, improve the picture and sound, and export a finished file, all on your own computer.
@@ -13,7 +13,7 @@ timeline, improve the picture and sound, and export a finished file, all on your
 4. [Importing media](#importing-media)
 5. [Editing on the timeline](#editing-on-the-timeline)
 6. [Playing and previewing](#playing-and-previewing)
-7. [Titles, transitions and video effects](#titles-transitions-and-video-effects)
+7. [Titles, transitions, effects and animation](#titles-transitions-effects-and-animation)
 8. [Working with sound](#working-with-sound)
 9. [AI tools](#ai-tools)
 10. [Exporting](#exporting)
@@ -27,7 +27,7 @@ timeline, improve the picture and sound, and export a finished file, all on your
 
 MediaForge runs on Windows 10 and 11 (64-bit). You don't need administrator rights to install it.
 
-1. Download **MediaForge-Setup-1.0.0.exe** from
+1. Download **MediaForge-Setup-1.1.0.exe** from
    [the releases page](https://github.com/kayceechris/mediaforge/releases/latest).
 2. Run it. Windows may show **"Windows protected your PC"**, because the installer isn't
    code-signed yet. Click **More info**, then **Run anyway**.
@@ -168,25 +168,41 @@ top, the sound may distort when exported.
 dashed outline shows which one. Drag it to move it around the frame, which is handy for
 picture-in-picture and titles.
 
-## Titles, transitions and video effects
+## Titles, transitions, effects and animation
 
 You set all of these in the **Inspector** after selecting a clip, and every change can be undone.
+What you see and hear in the preview is exactly what the export produces.
 
 **Titles.** Click **+ Title** to add a 5-second title at the playhead on a text track. In the
 Inspector, type the text (press Enter for more lines) and choose the font, colour, size,
 **Bold**, **Shadow** and position. To make a title longer or shorter, drag its edges or type a
 **Duration**. Still images work the same way (5 seconds by default).
 
+- **Style…** applies a ready-made layout: **Title**, **Big headline**, **Lower third** (name and
+  role in the bottom-left corner), **Caption** or **Corner tag**. Your text is kept.
+- **Alignment** sets left, centre or right alignment for lines of different lengths.
+- **Box** puts a background box behind the text. Set its colour, **Box opacity** and
+  **Box padding**.
+- **Animate in** and **Animate out** move the title on and off screen: **Fade**, **Slide up**,
+  **Slide down**, **Slide in from right**, **Slide in from left**, **Rise**, **Pop**, **Zoom out**
+  or **Typewriter** (letters appear one at a time). Set each one's length in seconds.
+
 **Transitions.** Select the clip that comes _second_ and pick **Transition in**:
 
-- **Crossfade:** the next clip gradually appears over the previous one.
-- **Dip to black:** the picture fades to black, then up into the next clip.
-- **Wipe:** the next clip is revealed from left to right.
+| Transition                                    | What you see                                                           |
+| --------------------------------------------- | ---------------------------------------------------------------------- |
+| **Crossfade**                                 | The next clip gradually appears over the previous one                  |
+| **Dip to black** / **Dip to white**           | The picture fades to black (or flashes white), then into the next clip |
+| **Wipe right / left / up / down**             | A hard edge moves across and reveals the next clip                     |
+| **Push left / right / up / down**             | The next clip slides in and pushes the previous one out                |
+| **Slide in from right / left / bottom / top** | The next clip slides in over the previous one                          |
+| **Zoom**                                      | The previous clip zooms in as the next one zooms out into place        |
+| **Circle reveal**                             | A growing circle from the centre reveals the next clip                 |
 
 Set its **Length** in seconds. A transition sits centred on the cut. It uses a little footage
 beyond the clips' trim points; if there is none, the first or last frame is held. Sound blends
-across the cut too. On a clip with nothing directly before it, the transition comes in from
-black. A white gradient on a clip shows that it has a transition.
+across the cut too (dips dip the sound). On a clip with nothing directly before it, the
+transition comes in from black. A white gradient on a clip shows that it has a transition.
 
 **Fades.** Drag the small round handle at a clip's top-left corner (fade in) or top-right corner
 (fade out), or type seconds into **Fade in** and **Fade out**. Fades affect both picture and
@@ -197,13 +213,45 @@ shorter or longer, and the clips after it on the same track move to make room. V
 normal pitch. For a moment after a change the sound may play "chipmunk-style" while the
 corrected audio is prepared.
 
-**Transform and picture-in-picture.** **Position X/Y**, **Scale**, **Rotation** and **Crop**
-(left, right, top, bottom) place a clip in the frame. **PiP** shrinks it to a third of its size
-and puts it in the bottom-right corner; **Reset** undoes all of these. You can also drag the
-clip in the preview.
+**Transform and picture-in-picture.** In **Transform & animation**, **Position X/Y**, **Scale**,
+**Rotation**, **Opacity** and **Crop** (left, right, top, bottom) place a clip in the frame.
+**PiP** shrinks it to a third of its size and puts it in the bottom-right corner; **Reset** undoes
+all of these. You can also drag the clip in the preview.
+
+**Keyframe animation.** To make a clip move, grow, turn or fade over time:
+
+1. Put the playhead where the movement should start and click the diamond (◇) beside
+   **Position X**, **Position Y**, **Scale**, **Rotation** or **Opacity**. It fills in (◆): a
+   keyframe now holds that value at that moment.
+2. Move the playhead later and change the slider (or drag the clip in the preview). A new
+   keyframe is added automatically.
+3. Play it back: the clip moves smoothly between the keyframes.
+
+Keyframes show as small diamonds on the clip in the timeline; click one to jump to it, or use
+the **Previous keyframe** and **Next keyframe** buttons. Click a filled diamond to remove that
+keyframe, and **Clear animation** removes them all. **Animate…** applies a ready-made movement
+over the whole clip: **Ken Burns** (slow zoom and pan, good for photos), **Zoom in**,
+**Zoom out**, **Pan left**, **Pan right** or **Pop in**.
 
 **Colour.** Use the **Brightness**, **Contrast** and **Saturation** sliders; saturation 0 makes
 the picture black and white. Double-click a slider to reset it.
+
+**Video effects.** The **Effects** section has **Apply a look…** for one-click styles
+(**Black & white**, **Vintage**, **Noir**, **Warm**, **Cool**, **Vivid**, **Dreamy**) and
+sliders you can fine-tune:
+
+| Effect            | What it does                                       |
+| ----------------- | -------------------------------------------------- |
+| **Blur**          | Softens the picture                                |
+| **Sharpen**       | Makes edges crisper                                |
+| **Vignette**      | Darkens the corners                                |
+| **Black & white** | Removes colour, partly or fully                    |
+| **Sepia**         | Gives an old-photo brown tint                      |
+| **Hue**           | Shifts all colours around the colour wheel         |
+| **Warmth**        | Makes the picture warmer (orange) or cooler (blue) |
+
+**Flip horizontal** mirrors the picture and **Flip vertical** turns it upside down. **Reset**
+removes all effects.
 
 ## Working with sound
 
@@ -228,6 +276,28 @@ switches the clip to it. The original stays in the library, and Undo switches ba
 | **Reduce noise** (Light / Medium / Strong) | Removes steady background noise                                                                 | Hiss, hum, fan or air-conditioning noise          |
 | **Isolate voice**                          | Keeps the voice and removes almost everything else, using a speech-trained neural network       | Speech recorded over traffic, music or room noise |
 | **Detect silence** → **Cut silences**      | Finds quiet gaps, then cuts them out (keeping a short breath) and closes the gaps               | Tightening up talking-head or podcast recordings  |
+
+**Audio effects** (in the Inspector, for a clip with sound) change how a clip sounds without
+making a copy. **Apply a preset…** gives you a starting point:
+
+| Preset            | Sounds like                                      |
+| ----------------- | ------------------------------------------------ |
+| **Telephone**     | A voice on a phone line: thin, no bass or treble |
+| **Radio**         | A broadcast voice: focused and compressed        |
+| **Voice clarity** | Speech that is clearer and more present          |
+| **Big room**      | The sound of a large hall (reverb)               |
+| **Echo**          | Repeats that fade away                           |
+| **Deep voice**    | A lower-pitched voice                            |
+| **Chipmunk**      | A higher-pitched voice                           |
+
+Then adjust the sliders: **Low cut** and **High cut** remove frequencies below or above a point;
+**Bass**, **Mid** and **Treble** boost or reduce those ranges; **Compressor** evens out loud and
+quiet moments; **Echo** (with **Echo delay**) and **Reverb** add space; **Pitch** raises or
+lowers the sound in semitones without changing its speed. Echo and reverb keep ringing for a
+moment after the clip ends. **Reset** removes all audio effects.
+
+Echo and reverb change immediately, even during playback. The other effects take a moment to
+prepare after a change; until then the clip plays without them.
 
 **Recording a voice-over.** Move the playhead to where the narration should start and click
 **● Rec** in the timeline toolbar. Allow microphone access if asked. The timeline plays while you
